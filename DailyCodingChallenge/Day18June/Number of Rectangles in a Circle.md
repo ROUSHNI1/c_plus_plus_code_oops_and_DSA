@@ -47,13 +47,17 @@ $$
 l^2 + w^2 \leq 4r^2
 $$
 
-## Java Code
+## C++ Code
 
-Here is the Java code to count all such rectangles:
+Here is the C++ code to count all such rectangles:
 
-```java
-public class Solution {
-    public int rectanglesInCircle(int r) {
+```cpp
+#include <iostream>
+using namespace std;
+
+class Solution {
+public:
+    int rectanglesInCircle(int r) {
         int count = 0;
         int diameterSquared = 4 * r * r;
         
@@ -70,12 +74,13 @@ public class Solution {
         }
         return count;
     }
+};
 
-    public static void main(String[] args) {
-        Solution solution = new Solution();
-        int r = 5; // Example radius, you can change it as needed
-        System.out.println("Total rectangles: " + solution.rectanglesInCircle(r));
-    }
+int main() {
+    Solution solution;
+    int r = 5; // Example radius, you can change it as needed
+    cout << "Total rectangles: " << solution.rectanglesInCircle(r) << endl;
+    return 0;
 }
 
 ```
@@ -83,14 +88,17 @@ public class Solution {
 
 you can solve this equation by this way but it is not optimized it only care to work on one condition length , bredth , diagonal <= diameter then it only count that rectangle as a valid rectangle inside define circle radius.
 
-```java
-public class RectanglesInCircle {
-    public static void main(String[] args) {
-        int r = 5; // Example radius, you can change it as needed
-        System.out.println("Total rectangles: " + countRectangles(r));
-    }
+# Rectangles in a Circle
 
-    public static int countRectangles(int r) {
+## c++ code
+
+```cpp
+#include <iostream>
+using namespace std;
+
+class RectanglesInCircle {
+public:
+    static int countRectangles(int r) {
         int count = 0;
         int radiusSquared = r * r;
         int diameterSquared = 4 * radiusSquared;
@@ -107,6 +115,11 @@ public class RectanglesInCircle {
         
         return count;
     }
-}
+};
 
+int main() {
+    int r = 5; // Example radius, you can change it as needed
+    cout << "Total rectangles: " << RectanglesInCircle::countRectangles(r) << endl;
+    return 0;
+}
 ```
